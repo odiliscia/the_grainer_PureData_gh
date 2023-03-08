@@ -4,7 +4,7 @@ CSYM = the_grainer~
 #Change this according your settings.
 current: pd_win
 LDFLAGS = -shared
-COMPILER = "c:/Program Files (x86)/mingw-w64/i686-7.1.0-posix-dwarf-rt_v5-rev2/mingw32/bin/gcc.exe"
+COMPILER = gcc
 #destination path, change according your settings
 DEST = C:/Users/pablo/Documents/my_program_files/the_grainer/bin
 #pd.dll path, change according your settings

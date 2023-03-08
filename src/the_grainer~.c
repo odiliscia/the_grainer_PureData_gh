@@ -12,7 +12,7 @@ Better resampling quality.
 Add the list selection for envelopes. (add method in the_grainer_tilde_any and modify set_oscil)
 Improve the data structure (it works, but could be much simpler)
 */
-#include "m_pd.h"
+#include "../include/m_pd.h"
 #include <math.h>
 #include <malloc.h>
 #include <stdio.h>
@@ -319,6 +319,7 @@ if(argc==0) {
 
 //check if the cycling or shuffle selection methods are requested and set the type accordingly
 temp = atom_getsymbol(&argv[argc-1]);
+post(" the_grainer~: %s ", temp->s_name);
 if(strcmp(temp->s_name, "float") == 0) {
 		x->lsel[what].type=RND;
 		x->lsel[what].size=argc;
@@ -1140,7 +1141,7 @@ void the_grainer_tilde_setup() {
         gensym("usegtn"), A_DEFFLOAT, 0);
 	class_addmethod(the_grainer_tilde_class, (t_method)the_grainer_tilde_useatn,
         gensym("useatn"), A_DEFFLOAT, 0);
-  	post("\n the_grainer~ external V1.1 March 2018 \n Pablo Di Liscia \n UNQ");
+  	post("\n the_grainer~ external V1.2 March 2022 \n Pablo Di Liscia with the collaboration of Damian Anache \n UNQ, Argentina \n");
 	return;
 }
 /******************************************************************/
